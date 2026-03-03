@@ -1,0 +1,132 @@
+\documentclass[12pt,a4paper]{letter}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{xcolor}
+\usepackage{paracol}
+\usepackage[fixed]{fontawesome5}
+\usepackage{ifxetex,ifluatex}
+\usepackage{makecell}
+
+\newif\ifxetexorluatex
+\ifxetex
+  \xetexorluatextrue
+\else
+  \ifluatex
+    \xetexorluatextrue
+  \else
+    \xetexorluatexfalse
+  \fi
+\fi
+
+% Change the page layout if you need to
+%\geometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+
+\usepackage{roboto}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setsansfont{Lato}
+\else
+  % If using pdflatex:
+  \usepackage[defaultsans]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{black}
+
+\newcommand{\namefont}{\huge\bfseries\robotoslab}
+\newcommand{\taglinefont}{\bfseries\textsf}
+
+\begin{document}
+\pagenumbering{gobble}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+\color{emphasis}{\namefont{\MakeUppercase{Tom De Caluwé}\medskip}}\\
+\color{tagline}{\taglinefont{Embedded Software Engineer}}
+
+\normalsize
+\normalfont
+
+\switchcolumn
+\color{body}
+\begin{flushright}
+\footnotesize
+\def\arraystretch{1.33}\begin{tabular}[t]{rl}
+\makecell[tr]{Sonnenhofstrasse 7\\8853 Lachen SZ} & \raisebox{-0.1\height} {\color{accent}\faMapMarker}\\
+decaluwe.t at gmail.com & \raisebox{-0.15\height}{\color{accent}\faEnvelope}\\
++41 78 448 48 48 & \raisebox{-0.1\height}{\color{accent}\faPhone}\\
+\end{tabular}
+\end{flushright}
+
+\switchcolumn*
+{\footnotesize\color{emphasis}To:}\\
+\color{body}
+Specialized Europe GmbH\\
+Werkstattgasse 10\\
+6330 Cham\\
+\\
+
+\end{paracol}
+
+\color{body}
+
+Dear Hiring Team,
+
+I am writing to apply for the Embedded Software Engineer (HMI) role in Cham. The opportunity to work on e‑bike HMI firmware and to contribute to systems that connect riders, apps and retailers is exactly the kind of embedded work I enjoy.
+
+I have delivered hardware‑near projects that connect software and devices. For example, I built an Android application that integrated Zebra and NordicID RFID readers—programming Nordic devices directly and controlling Zebra units over Bluetooth‑serial. I also created Arduino and Raspberry Pi prototypes for sensor and communication tasks; these projects taught me pragmatic hardware testing, incremental prototyping and field troubleshooting.
+
+My primary background is in Python for backend systems, integrations and tooling, and I bring that focus on clean architecture, documented and tested code to embedded work. I also have practical experience in C++ for hardware‑near prototypes and continue to develop my Embedded C and RTOS knowledge. I use git and bash in collaborative workflows, write automated tests, and create design and operational documentation to keep firmware and tooling maintainable across the product lifecycle.
+
+I enjoy diagnosing field issues and supporting main repositories used by internal and external developers. I am ready to deepen my knowledge of CAN, BLE and ANT+ and to contribute quickly to HMI firmware, protocol layers and the associated development workflows.
+
+Thank you for considering my application. I look forward to the possibility of discussing how I can contribute to your e‑bike HMI development.
+
+Kind regards,
+
+Tom De Caluwé
+
+
+Dear Hiring Team,
+
+I am writing to apply for the Embedded Software Engineer (HMI) role in Cham. The opportunity to work on e‑bike HMI firmware and to contribute to systems that connect riders, apps and retailers is exactly the kind of embedded work I enjoy.
+
+In previous projects I have developed hardware‑near software and practical prototypes: I built an Android app integrating RFID hardware from Zebra and NordicID, using both embedded software and Bluetooth serial communication for a smooth integration. Additionally I implemented small prototypes on Arduino and Raspberry Pi for projects involving hardware communication or sensor monitoring. These projects taught me how to develop, test and troubleshoot embedded hardware setups in the field.
+
+Technically, I have worked in C++ and continue to build my Embedded C skills and knowledge of RTOS concepts. Recently I have focused on Python for tooling and automation, and I am comfortable with git and bash for collaborative development. I am learning build systems such as make and cmake and am eager to apply these skills with ZephyrOS. I also write automated tests and documentation to keep code reliable over the product lifecycle.
+
+I have hands‑on experience with Bluetooth/serial integrations and am ready to deepen my knowledge of CAN bus, BLE and ANT+. I enjoy root cause analysis for issues returned from the field and maintaining a main repository used by both internal and external developers.
+
+Thank you for considering my application. I look forward to the possibility of discussing how I can contribute to your e‑bike HMI development.
+
+Kind regards,
+
+Tom De Caluwé
+
+\end{document}

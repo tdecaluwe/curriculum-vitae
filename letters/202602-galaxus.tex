@@ -1,0 +1,119 @@
+\documentclass[12pt,a4paper]{letter}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[nswissgerman]{babel}
+
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{xcolor}
+\usepackage{paracol}
+\usepackage[fixed]{fontawesome5}
+\usepackage{ifxetex,ifluatex}
+\usepackage{makecell}
+\usepackage{pdfpages}
+
+\newif\ifxetexorluatex
+\ifxetex
+  \xetexorluatextrue
+\else
+  \ifluatex
+    \xetexorluatextrue
+  \else
+    \xetexorluatexfalse
+  \fi
+\fi
+
+% Change the page layout if you need to
+%\geometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+
+\usepackage{roboto}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setsansfont{Lato}
+\else
+  % If using pdflatex:
+  \usepackage[defaultsans]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{black}
+
+\newcommand{\namefont}{\huge\bfseries\robotoslab}
+\newcommand{\taglinefont}{\bfseries\textsf}
+
+\begin{document}
+\pagenumbering{gobble}
+
+%\color{headingrule}
+%\noindent\rule{\linewidth}{2pt}\par
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.5}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+\color{emphasis}{\namefont{\MakeUppercase{Tom De Caluwé}\medskip}}\\
+\color{tagline}{\taglinefont{Lead Software Engineer}}
+
+\normalsize
+\normalfont
+
+\switchcolumn
+\color{body}
+\begin{flushright}
+\footnotesize
+\def\arraystretch{1.33}\begin{tabular}[t]{rl}
+\makecell[tr]{Sonnenhofstrasse 7\\8853 Lachen SZ} & \raisebox{-0.1\height} {\color{accent}\faMapMarker}\\
+decaluwe.t at gmail.com & \raisebox{-0.15\height}{\color{accent}\faEnvelope}\\
++41 78 448 48 48 & \raisebox{-0.1\height}{\color{accent}\faPhone}\\
+\end{tabular}
+\end{flushright}
+
+\switchcolumn*
+{\footnotesize\color{emphasis}To:}\\
+\color{body}
+EPAM Systems\\
+Boulevard Lilienthal 2\\
+8152 Glattpark\\
+\\
+
+\end{paracol}
+
+\color{body}
+
+Sehr geehrtes Galaxus Recruiting-Team,
+
+mit grossem Interesse bewerbe ich mich als Software Engineer im Bereich Product Development. Die Möglichkeit, in einem agilen Produktteam skalierbare, nutzerzentrierte Lösungen für Millionen von Kundinnen und Kunden zu entwickeln und dabei moderne Cloud- und Datenarchitekturen zu gestalten, entspricht genau meiner beruflichen Ausrichtung.
+
+Ich bringe über drei Jahre Berufserfahrung als Software Engineer mit fundierten Kenntnissen in .NET/C# sowie praktischer Erfahrung mit relationalen und nicht-relationalen Datenbanken (MSSQL, MongoDB, Redis) und Suchtechnologien wie Elasticsearch. Zudem habe ich Anwendungen in Azure betrieben und weiterentwickelt, inklusive Monitoring und stabiler Betriebsabläufe.
+
+In meinen bisherigen Projekten habe ich sowohl neue Features von der Konzeption bis zur Auslieferung umgesetzt als auch bestehende Systeme refaktoriert, um Skalierbarkeit, Performance und Wartbarkeit zu verbessern. Dabei arbeite ich eng mit Product, Design und Data zusammen, setze auf pragmatische, testgetriebene Ansätze und lege Wert auf saubere Schnittstellen und beobachtbare Infrastruktur.
+
+Ich denke ganzheitlich, identifiziere technische Schulden frühzeitig und bringe gern eigene Ideen ein, um Prozesse und Plattformen nachhaltig zu optimieren. Offene Kommunikation auf Deutsch und Englisch sowie die enge Zusammenarbeit mit Stakeholdern gehören für mich selbstverständlich dazu.
+
+Gern würde ich meine Erfahrung in Ihrem Team einbringen, um das Einkaufserlebnis weiter zu verbessern und die Plattform gemeinsam voranzutreiben. Ich freue mich auf ein Gespräch, in dem wir technische Ziele und mögliche Beiträge meinerseits konkret besprechen können.
+
+Freundliche Grüsse,
+
+Tom De Caluwé
+
+\end{document}
