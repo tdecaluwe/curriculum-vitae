@@ -1,0 +1,119 @@
+\documentclass[12pt,a4paper,ragged2e]{letter}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[nswissgerman]{babel}
+
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{xcolor}
+\usepackage{paracol}
+\usepackage[fixed]{fontawesome5}
+\usepackage{ifxetex,ifluatex}
+\usepackage{makecell}
+
+\newif\ifxetexorluatex
+\ifxetex
+  \xetexorluatextrue
+\else
+  \ifluatex
+    \xetexorluatextrue
+  \else
+    \xetexorluatexfalse
+  \fi
+\fi
+
+% Change the page layout if you need to
+%\geometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+
+\usepackage{roboto}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setsansfont{Lato}
+\else
+  % If using pdflatex:
+  \usepackage[defaultsans]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{black}
+
+\newcommand{\namefont}{\huge\bfseries\robotoslab}
+\newcommand{\taglinefont}{\bfseries\textsf}
+
+\begin{document}
+\pagenumbering{gobble}
+
+%\color{headingrule}
+%\noindent\rule{\linewidth}{2pt}\par
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.5}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+\color{emphasis}{\namefont{\MakeUppercase{Tom De Caluwé}\medskip}}\\
+\color{tagline}{\taglinefont{Embedded Software Engineer}}
+
+\normalsize
+\normalfont
+
+\switchcolumn
+\color{body}
+\begin{flushright}
+\footnotesize
+\def\arraystretch{1.33}\begin{tabular}[t]{rl}
+\makecell[tr]{Sonnenhofstrasse 7\\8853 Lachen SZ} & \raisebox{-0.1\height} {\color{accent}\faMapMarker}\\
+decaluwe.t at gmail.com & \raisebox{-0.15\height}{\color{accent}\faEnvelope}\\
++41 78 448 48 48 & \raisebox{-0.1\height}{\color{accent}\faPhone}\\
+\end{tabular}
+\end{flushright}
+
+\switchcolumn*
+{\footnotesize\color{emphasis}To:}\\
+\color{body}
+Novasina AG\\
+Anita Landolt\\
+Neuheimstrasse 12\\
+8853 Lachen SZ\\
+\\
+
+\end{paracol}
+
+\color{body}
+
+Sehr geehrte Frau Landolt,
+
+Mit grossem Interesse bewerbe ich mich auf die Position als Embedded Software Engineer bei Novasina AG. Die Arbeit an hardware-nahen Messsystemen und die Möglichkeit, in einem kollaborativen Team in meiner Nähe zu arbeiten, sprechen mich sehr an.
+
+In früheren Projekten habe ich Softwareentwicklung eng mit Hardware gekoppelt. Bei einem belgischen Einzelhändler entwickelte ich eine Android‑App, die RFID‑Hardware von Zebra und Nordic ID integrierte. Dabei programmierte ich Nordic ID‑Geräte direkt und steuerte Zebra‑Geräte über Bluetooth‑Serial. Zudem habe ich kleinere Prototypen mit Arduino und Raspberry Pi umgesetzt und praktisch Erfahrung mit hardwarenahen Schnittstellen und Sensor‑Logik gesammelt. In meinen letzten Rollen habe ich Integrationsthemen und Automatisierung in Produktion und Logistik begleitet, wobei saubere, wartbare Software immer im Zentrum stand.
+
+Ich begleite Projekte von der Konzeptphase bis zur Produktion. Dabei lege ich Wert auf saubere Architektur, gut dokumentierten und getesteten Code sowie darauf, dass Systeme keine technischen Schulden anhäufen.
+
+Mein Deutsch ist derzeit auf Konversationsniveau. Im beruflichen Alltag arbeite ich hauptsächlich auf Englisch. Eine kontinuierliche Verbesserung meiner Deutschkenntnisse ist für mich selbstverständlich.
+
+Ich freue mich darauf, meine technische Erfahrung, Hands-on-Mentalität und strukturierte Arbeitsweise bei Novasina einzubringen und die Entwicklung Ihrer Embedded-Softwareprojekte zu unterstützen. Vielen Dank für Ihre Zeit und Berücksichtigung meiner Bewerbung.
+
+Freundliche Grüsse,
+
+Tom De Caluwé
+
+\end{document}

@@ -1,0 +1,121 @@
+\documentclass[12pt,a4paper]{letter}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[nswissgerman]{babel}
+
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{xcolor}
+\usepackage{paracol}
+\usepackage[fixed]{fontawesome5}
+\usepackage{ifxetex,ifluatex}
+\usepackage{makecell}
+\usepackage{pdfpages}
+
+\newif\ifxetexorluatex
+\ifxetex
+  \xetexorluatextrue
+\else
+  \ifluatex
+    \xetexorluatextrue
+  \else
+    \xetexorluatexfalse
+  \fi
+\fi
+
+% Change the page layout if you need to
+%\geometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+
+\usepackage{roboto}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setsansfont{Lato}
+\else
+  % If using pdflatex:
+  \usepackage[defaultsans]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{black}
+
+\newcommand{\namefont}{\huge\bfseries\robotoslab}
+\newcommand{\taglinefont}{\bfseries\textsf}
+
+\begin{document}
+\pagenumbering{gobble}
+
+%\color{headingrule}
+%\noindent\rule{\linewidth}{2pt}\par
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.5}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+\color{emphasis}{\namefont{\MakeUppercase{Tom De Caluwé}\medskip}}\\
+\color{tagline}{\taglinefont{Lead Software Engineer}}
+
+\normalsize
+\normalfont
+
+\switchcolumn
+\color{body}
+\begin{flushright}
+\footnotesize
+\def\arraystretch{1.33}\begin{tabular}[t]{rl}
+\makecell[tr]{Sonnenhofstrasse 7\\8853 Lachen SZ} & \raisebox{-0.1\height} {\color{accent}\faMapMarker}\\
+decaluwe.t at gmail.com & \raisebox{-0.15\height}{\color{accent}\faEnvelope}\\
++41 78 448 48 48 & \raisebox{-0.1\height}{\color{accent}\faPhone}\\
+\end{tabular}
+\end{flushright}
+
+\switchcolumn*
+{\footnotesize\color{emphasis}To:}\\
+\color{body}
+EPAM Systems\\
+Boulevard Lilienthal 2\\
+8152 Glattpark\\
+\\
+
+\end{paracol}
+
+\color{body}
+
+Dear Hiring Team,
+
+I am writing to express my interest in the Lead Software Engineer position in Zug. The opportunity to lead the refactoring and redesign of integration layers between legacy systems and a modern CRM environment strongly aligns with my experience in system integration, Python development, and ERP-driven process architecture.
+
+In my previous roles, including my position as Head of IT at the Swiss company LeeGroup, I was responsible for designing and implementing integration solutions between ERP systems, operational tools, and external platforms. At LeeGroup, for example, I integrated Shopify with Odoo to combine Shopify's high-volume sales capacity with Odoo's strengths in automating and running business processes. Other relevant projects include integrations with third-party marketplaces or automation tools in both manufacturing and logistics.
+
+My background combines practical development expertise with a solid understanding of business processes. This enables me to evaluate integration layers not only from a technical perspective but also in terms of operational impact and long-term scalability. Recently I've focused on Python for backend systems, data pipelines, and APIs. I care about clean architecture and code that's both documented and tested, databases that are optimized, and systems that don't accumulate technical debt.
+
+I am motivated by roles where refactoring and system redesign are not merely technical exercises, but strategic improvements that ensure business continuity and sustainable growth. I would welcome the opportunity to contribute this mindset and hands-on experience to EPAM’s team in Zug.
+
+Thank you for your consideration. I look forward to discussing how I can support the successful modernization of your integration landscape.
+
+Kind regards,
+
+Tom De Caluwé
+
+\includepdf[pages=-]{../202602-resume-lead.pdf}
+
+\end{document}

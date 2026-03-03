@@ -1,0 +1,122 @@
+\documentclass[12pt,a4paper]{letter}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[nswissgerman]{babel}
+
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{xcolor}
+\usepackage{paracol}
+\usepackage[fixed]{fontawesome5}
+\usepackage{ifxetex,ifluatex}
+\usepackage{makecell}
+\usepackage{pdfpages}
+
+\newif\ifxetexorluatex
+\ifxetex
+  \xetexorluatextrue
+\else
+  \ifluatex
+    \xetexorluatextrue
+  \else
+    \xetexorluatexfalse
+  \fi
+\fi
+
+% Change the page layout if you need to
+%\geometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+
+\usepackage{roboto}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setsansfont{Lato}
+\else
+  % If using pdflatex:
+  \usepackage[defaultsans]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{black}
+
+\newcommand{\namefont}{\huge\bfseries\robotoslab}
+\newcommand{\taglinefont}{\bfseries\textsf}
+
+\begin{document}
+\pagenumbering{gobble}
+
+%\color{headingrule}
+%\noindent\rule{\linewidth}{2pt}\par
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.5}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+\color{emphasis}{\namefont{\MakeUppercase{Tom De Caluwé}\medskip}}\\
+\color{tagline}{\taglinefont{Prozessentwickler}}
+
+\normalsize
+\normalfont
+
+\switchcolumn
+\color{body}
+\begin{flushright}
+\footnotesize
+\def\arraystretch{1.33}\begin{tabular}[t]{rl}
+\makecell[tr]{Sonnenhofstrasse 7\\8853 Lachen SZ} & \raisebox{-0.1\height} {\color{accent}\faMapMarker}\\
+decaluwe.t at gmail.com & \raisebox{-0.15\height}{\color{accent}\faEnvelope}\\
++41 78 448 48 48 & \raisebox{-0.1\height}{\color{accent}\faPhone}\\
+\end{tabular}
+\end{flushright}
+
+\switchcolumn*
+{\footnotesize\color{emphasis}To:}\\
+\color{body}
+Andi Diethelm\\
+Borm-Informatik AG\\
+Schlagstrasse 135\\
+CH-6431 Schwyz\\
+\\
+
+\end{paracol}
+
+\color{body}
+
+Sehr geehrter Herr Diethelm,
+
+Die Verbindung von Geschäftsprozessen und technischer Umsetzung bildet seit mehreren Jahren den Schwerpunkt meiner Tätigkeit. Die Position als Prozessentwickler für ERP und Automatisierung bei Borm spricht mich daher sehr an.
+
+Ich kombiniere Prozessanalyse mit praktischer Implementierung: bei De Kampeerder und später als Head of IT bei LeeGroup habe ich Geschäftsprozesse digitalisiert, Schnittstellen und Automatisierungen gebaut und dadurch Abläufe effizienter und weniger fehleranfällig gemacht. Technisch arbeite ich hauptsächlich mit Python, API‑Integrationen und SQL und setze auf klare Architektur und langfristig wartbare Lösungen.
+
+Durch meine Erfahrung auf Unternehmensseite verstehe ich sowohl die Perspektive der Fachbereiche als auch die technischen Anforderungen im Hintergrund. Diese Schnittstellenfunktion zwischen Business und Entwicklung sehe ich als eine meiner zentralen Stärken.
+
+Mein Deutsch ist derzeit auf Konversationsniveau. Im beruflichen Kontext kann ich mich zu fachlichen Themen verständigen und arbeite kontinuierlich daran, meine Sprachkenntnisse weiter auszubauen.
+
+Gerne würde ich meine Erfahrung in der Prozessanalyse und technischen Umsetzung bei Borm einbringen und weiter vertiefen.
+
+Freundliche Grüsse,
+
+Tom De Caluwé
+
+\includepdf[pages=-]{../202602-resume-prozessentwickler-de.pdf}
+
+\end{document}

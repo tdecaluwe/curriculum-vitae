@@ -1,0 +1,243 @@
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+%% AltaCV uses the fontawesome5 and packages.
+%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\begin{document}
+\name{Tom De Caluwé}
+\tagline{Embedded Software Engineer}
+%% You can add multiple photos on the left or right
+\photoR{3.1cm}{SAM_1688}
+% \photoL{2.5cm}{Yacht_High,Suitcase_High}
+
+\personalinfo{%
+  % Not all of these are required!
+  \email{decaluwe.t@gmail.com}
+  \phone{+41 78 448 48 48}
+  %\mailaddress{\r{A}smarkvegen 1206, 2365 \r{A}smarka, Norway}
+  %\mailaddress{Liersesteenweg 99, 2640 Mortsel, Belgium}
+  \mailaddress{Sonnenhofstrasse 7, 8853 Lachen SZ}
+  %\location{Location, COUNTRY}
+  %\homepage{www.homepage.com}
+  %\twitter{@twitterhandle}
+  \linkedin{tdecaluwe}
+  \github{tdecaluwe}
+  %\orcid{0000-0000-0000-0000}
+  %% You can add your own arbitrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
+  %% Or you can declare your own field with
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+  % \gitlab{your_id}
+  %%
+  %% For services and platforms like Mastodon where there isn't a
+  %% straightforward relation between the user ID/nickname and the hyperlink,
+  %% you can use \printinfo directly e.g.
+  % \printinfo{\faMastodon}{@username@instace}[https://instance.url/@username]
+  %% But if you absolutely want to create new dedicated info fields for
+  %% such platforms, then use \NewInfoField* with a star:
+  % \NewInfoField*{mastodon}{\faMastodon}
+  %% then you can use \mastodon, with TWO arguments where the 2nd argument is
+  %% the full hyperlink.
+  % \mastodon{@username@instance}{https://instance.url/@username}
+}
+
+\makecvheader
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+\cvsection{Experience}
+
+\cvevent{Head of IT}{LeeGroup}{Sep 2024 -- Oct 2025}{Rothenburg, Switzerland}
+\begin{itemize}
+\item Building an IT department and infrastructure
+\item Development projects in supply chain visibility, manufacturing resource planning and logistics optimization
+\end{itemize}
+\cvtag{python}
+\cvtag{odoo}
+\cvtag{shopify}
+
+\divider
+
+\cvevent{Python \& Javascript Developer}{Odoo}{Mar 2021 -- Feb 2024}{Ramilies, Belgium}
+\begin{itemize}
+\item Working on projects across a wide functional scope, including accounting, logistics, marketing automation and others
+\item Contributing to the frontend framework for the odoo client
+\end{itemize}
+\cvtag{python}
+\cvtag{javascript}
+\cvtag{postgres}
+
+\divider
+
+\cvevent{IT Project Manager}{De Kampeerder}{May 2015 -- Nov 2019}{Antwerp, Belgium}
+\begin{itemize}
+\item Implementing and customizing Odoo as an ERP solution
+\item Applying RFID technology in a retail environment to optimize logistical workflows
+\item Integrating with online marketplaces
+\end{itemize}
+\cvtag{python}
+\cvtag{java}
+\cvtag{android}
+\cvtag{rfid}
+
+\divider
+
+\cvevent{Software Developer}{Rubbens}{Project based (2016)}{Wichelen, Belgium}
+\begin{itemize}
+\item Developing a node.js webservice for \emph{Electronic Data Interchange} three-way match communications
+\end{itemize}
+\cvtag{node.js}
+\cvtag{javascript}
+\cvtag{edifact}
+
+\divider
+
+\cvevent{Dogsledding Guide}{Multiple Companies}{Dec 2019 - Apr 2024 (Seasonal)}{Canada, Norway \& Sweden}
+
+% \divider
+
+% \cvevent{Zipline Guide}{Zipzone Peachland}{Jun 2020 - Sep 2020}{Peachland, Canada}
+
+\medskip
+
+\cvsection{Volunteering}
+
+\cvevent{Workshop Supervisor}{De Sleutel}{Sep 2014 - Mar 2015}{Antwerp, Belgium}
+
+% use ONLY \newpage if you want to force a page break for
+% ONLY the current column
+%\newpage
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+\cvsection{Profile}
+
+\begin{itemize}
+\item Experience with both small and enterprise scale projects
+\item Doesn't shy away from a challenge
+\item Feels more at home in the backend, but knows his way around the frontend
+\end{itemize}
+
+\cvsection{Strengths}
+
+\cvtag{problem solver}
+\cvtag{eye for detail}\\
+\smallskip
+\cvtag{analytical mindset}
+
+\cvsection{Technology}
+
+\cvtag{python}
+\cvtag{java}
+\cvtag{javascript}
+\cvtag{c++}\\
+\smallskip
+\cvtag{kotlin}
+\cvtag{webgpu}
+
+\divider
+
+\cvtag{docker}
+\cvtag{node.js}
+\cvtag{android}
+\cvtag{odoo}\\
+\smallskip
+\cvtag{git}
+\cvtag{sql}
+\cvtag{mongodb}
+\cvtag{matlab}\\
+\smallskip
+\cvtag{sparql}
+\cvtag{rfid}
+\cvtag{arduino}
+
+\cvsection{Languages}
+
+\cvskill{English}{5}
+\divider
+
+\cvskill{French}{5}
+\divider
+
+\cvskill{Dutch}{5}
+\divider
+
+\cvskill{German}{2}
+
+%% Yeah I didn't spend too much time making all the
+%% spacing consistent... sorry. Use \smallskip, \medskip,
+%% \bigskip, \vspace etc to make adjustments.
+\medskip
+
+\cvsection{Good to know}
+
+\cvachievement{\faHeartbeat}{First Aid \& CPR}{Training \emph{Secourisme en mileu de travail} attended in french}
+
+\divider
+
+\cvachievement{\faCertificate}{Rock Climbing Instructor}{Certification course \emph{Initiator Rotsklimmen} organized by \emph{Sport Vlaanderen}}
+
+\end{paracol}
+
+\end{document}

@@ -1,0 +1,180 @@
+%% Deutsche Übersetzung des Lebenslaufs
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+\usepackage{paracol}
+\ifxetexorluatex
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\begin{document}
+\name{Tom De Caluwé}
+\tagline{Prozessentwickler}
+\photoR{3.1cm}{SAM_1688}
+
+\personalinfo{%
+  \email{decaluwe.t@gmail.com}
+  \phone{+41 78 448 48 48}
+  \mailaddress{Sonnenhofstrasse 7, 8853 Lachen SZ}
+  \linkedin{tdecaluwe}
+  \github{tdecaluwe}
+}
+
+\makecvheader
+\columnratio{0.6}
+\begin{paracol}{2}
+
+\cvsection{Berufserfahrung}
+
+\cvevent{Leiter IT}{LeeGroup}{Sep 2024 -- Okt 2025}{Rothenburg, Schweiz}
+\begin{itemize}
+\item Aufbau der IT‑Abteilung und Infrastruktur
+\item Entwicklungsprojekte zur Transparenz in der Lieferkette, Manufacturing Resource Planning und Logistikoptimierung
+\end{itemize}
+\cvtag{python}
+\cvtag{odoo}
+\cvtag{shopify}
+
+\divider
+
+\cvevent{Python- \& JavaScript-Entwickler}{Odoo}{Mär 2021 -- Feb 2024}{Ramilies, Belgien}
+\begin{itemize}
+\item Mitarbeit an Projekten mit breitem funktionalem Umfang, u.a. Buchhaltung, Logistik und Marketingautomatisierung
+\item Beitrag zum Frontend‑Framework des Odoo‑Clients
+\end{itemize}
+\cvtag{python}
+\cvtag{javascript}
+\cvtag{postgres}
+
+\divider
+
+\cvevent{IT‑Projektleiter}{De Kampeerder}{Mai 2015 -- Nov 2019}{Antwerpen, Belgien}
+\begin{itemize}
+\item Einführung und Anpassung von Odoo als ERP‑Lösung
+\item Einsatz von RFID‑Technik im Einzelhandel zur Optimierung logistischer Abläufe
+\item Integration mit Online‑Marktplätzen
+\end{itemize}
+\cvtag{python}
+\cvtag{java}
+\cvtag{android}
+\cvtag{rfid}
+
+\divider
+
+\cvevent{Softwareentwickler}{Rubbens}{Projektbasiert (2016)}{Wichelen, Belgien}
+\begin{itemize}
+\item Entwicklung eines node.js Webservices für Electronic Data Interchange (Three‑Way Match)
+\end{itemize}
+\cvtag{node.js}
+\cvtag{javascript}
+\cvtag{edifact}
+
+\divider
+
+\cvevent{Hundeschlittenführer}{Verschiedene Firmen}{Dez 2019 -- Apr 2024 (Saison)}{Kanada, Norwegen \& Schweden}
+
+\medskip
+
+\cvsection{Freiwilligenarbeit}
+
+\cvevent{Workshop‑Leiter}{De Sleutel}{Sep 2014 -- Mär 2015}{Antwerpen, Belgien}
+
+\switchcolumn
+
+\cvsection{Profil}
+
+\begin{itemize}
+\item Erfahrung mit Projekten in kleinem und unternehmensweitem Umfang
+\item Scheut keine Herausforderungen
+\item Fühlt sich im Backend zu Hause, kennt sich aber auch im Frontend aus
+\end{itemize}
+
+\cvsection{Stärken}
+
+\cvtag{Problemlöser}
+\cvtag{Auge fürs Detail}\\
+\smallskip
+\cvtag{analytische Denkweise}
+
+\cvsection{Technologien}
+
+\cvtag{python}
+\cvtag{java}
+\cvtag{javascript}
+\cvtag{c++}\\
+\smallskip
+\cvtag{kotlin}
+\cvtag{webgpu}
+
+\divider
+
+\cvtag{docker}
+\cvtag{node.js}
+\cvtag{android}
+\cvtag{odoo}\\
+\smallskip
+\cvtag{git}
+\cvtag{sql}
+\cvtag{mongodb}
+\cvtag{matlab}\\
+\smallskip
+\cvtag{sparql}
+\cvtag{rfid}
+\cvtag{arduino}
+
+\cvsection{Sprachen}
+
+\cvskill{Englisch}{5}
+\divider
+
+\cvskill{Französisch}{5}
+\divider
+
+\cvskill{Niederländisch}{5}
+\divider
+
+\cvskill{Deutsch}{2}
+
+\medskip
+
+\cvsection{Wissenswertes}
+
+\cvachievement{\faHeartbeat}{Erste Hilfe \& CPR}{Schulung \emph{Secourisme en milieu de travail} besucht (auf Französisch)}
+
+\divider
+
+\cvachievement{\faCertificate}{Kletterinstruktor}{Zertifikatskurs \emph{Initiator Rotsklimmen} organisiert von \emph{Sport Vlaanderen}}
+
+\end{paracol}
+
+\end{document}
