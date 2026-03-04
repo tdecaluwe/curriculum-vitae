@@ -1,0 +1,117 @@
+\documentclass[12pt,a4paper]{letter}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{xcolor}
+\usepackage{paracol}
+\usepackage[fixed]{fontawesome5}
+\usepackage{ifxetex,ifluatex}
+\usepackage{makecell}
+\usepackage{pdfpages}
+
+\newif\ifxetexorluatex
+\ifxetex
+  \xetexorluatextrue
+\else
+  \ifluatex
+    \xetexorluatextrue
+  \else
+    \xetexorluatexfalse
+  \fi
+\fi
+
+% Change the page layout if you need to
+%\geometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+
+\usepackage{roboto}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setsansfont{Lato}
+\else
+  % If using pdflatex:
+  \usepackage[defaultsans]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{black}
+
+\newcommand{\namefont}{\huge\bfseries\robotoslab}
+\newcommand{\taglinefont}{\bfseries\textsf}
+
+\begin{document}
+\pagenumbering{gobble}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.5}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+\color{emphasis}{\namefont{\MakeUppercase{Tom De Caluwé}\medskip}}\\
+\color{tagline}{\taglinefont{Développeur Odoo}}
+
+\normalsize
+\normalfont
+
+\switchcolumn
+\color{body}
+\begin{flushright}
+\footnotesize
+\def\arraystretch{1.33}\begin{tabular}[t]{rl}
+\makecell[tr]{Sonnenhofstrasse 7\\8853 Lachen SZ} & \raisebox{-0.1\height} {\color{accent}\faMapMarker}\\
+decaluwe.t at gmail.com & \raisebox{-0.15\height}{\color{accent}\faEnvelope}\\
++41 78 448 48 48 & \raisebox{-0.1\height}{\color{accent}\faPhone}\\
+\end{tabular}
+\end{flushright}
+
+\switchcolumn*
+{\footnotesize\color{emphasis}À~:}\\
+\color{body}
+Infomaniak Network AG\\
+Zurich\\
+\\
+
+\end{paracol}
+
+\color{body}
+
+Madame, Monsieur,
+
+Je suis depuis quelque temps les offres d'emploi publiées par Infomaniak, et c'est avec un vif intérêt que j'ai pris connaissance de votre poste de développeur Odoo. L'approche d'Infomaniak, axée sur des solutions Odoo techniquement solides et bien structurées, correspond pleinement à ce qui me motive dans mon travail.
+
+Fort de plus de trois ans d'expérience en développement logiciel Odoo~--- en tant que développeur chez Odoo SA et au travers du déploiement de solutions Odoo chez De Kampeerder et LeeGroup~--- je maîtrise l'architecture modulaire, la rédaction de code maintenable et le déploiement de solutions ERP. Mes points forts comprennent la personnalisation de modules, l'intégration avec des systèmes externes ainsi que l'amélioration continue pour la performance et la stabilité.
+
+J'accorde une importance particulière à la qualité du code et aux solutions durables. Capable de travailler de façon autonome sur des sujets techniques complexes, je sais néanmoins collaborer efficacement au sein d'une équipe et m'adapter aux processus en place.
+
+Mon français est au niveau conversationnel. Je peux aborder des sujets techniques et je m'engage à continuer à développer mes compétences linguistiques. L'ouverture récente d'un bureau d'Infomaniak à Zurich rend cette opportunité particulièrement attractive pour moi.
+
+Je serais ravi de mettre mon expérience au service de votre équipe.
+
+Cordialement,
+
+Tom De Caluwé
+
+\includepdf[pages=-]{../202603-odoo-fr.pdf}
+
+\end{document}
