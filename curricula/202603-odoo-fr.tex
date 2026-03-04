@@ -1,0 +1,204 @@
+%% CV en français orienté développement Odoo
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+%% AltaCV uses the fontawesome5 and packages.
+%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\begin{document}
+\name{Tom De Caluwé}
+\tagline{Développeur Odoo}
+%% You can add multiple photos on the left or right
+\photoR{3.1cm}{SAM_1688}
+
+\personalinfo{%
+  % Not all of these are required!
+  \email{decaluwe.t@gmail.com}
+  \phone{+41 78 448 48 48}
+  \mailaddress{Sonnenhofstrasse 7, 8853 Lachen SZ}
+  \linkedin{tdecaluwe}
+  \github{tdecaluwe}
+}
+
+\makecvheader
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+\cvsection{Expérience}
+
+\cvevent{Responsable IT}{LeeGroup}{Sep 2024 -- Oct 2025}{Rothenburg, Suisse}
+\begin{itemize}
+\item Mise en place du département IT et de l'infrastructure
+\item Déploiement et personnalisation d'Odoo pour la gestion des opérations
+\item Projets de développement en visibilité de la chaîne d'approvisionnement, planification de la production et optimisation logistique
+\end{itemize}
+\cvtag{python}
+\cvtag{odoo}
+\cvtag{shopify}
+
+\divider
+
+\cvevent{Développeur Python \& Javascript}{Odoo}{Mar 2021 -- Fév 2024}{Ramilies, Belgique}
+\begin{itemize}
+\item Développement de modules dans un large périmètre fonctionnel~: comptabilité, logistique, automatisation marketing et autres
+\item Contribution au framework frontend du client Odoo
+\item Conception d'architectures modulaires et de code maintenable à long terme
+\end{itemize}
+\cvtag{python}
+\cvtag{javascript}
+\cvtag{postgres}
+
+\divider
+
+\cvevent{Responsable Projets IT}{De Kampeerder}{Mai 2015 -- Nov 2019}{Anvers, Belgique}
+\begin{itemize}
+\item Implémentation et personnalisation d'Odoo comme solution ERP
+\item Application de la technologie RFID dans un environnement de vente au détail pour optimiser les flux logistiques
+\item Intégration avec des places de marché en ligne
+\end{itemize}
+\cvtag{python}
+\cvtag{java}
+\cvtag{android}
+\cvtag{rfid}
+
+\divider
+
+\cvevent{Développeur logiciel}{Rubbens}{Basé sur projet (2016)}{Wichelen, Belgique}
+\begin{itemize}
+\item Développement d'un service web node.js pour les communications \emph{Electronic Data Interchange} (three-way match)
+\end{itemize}
+\cvtag{node.js}
+\cvtag{javascript}
+\cvtag{edifact}
+
+\divider
+
+\cvevent{Guide de traîneau à chiens}{Plusieurs entreprises}{Déc 2019 -- Avr 2024 (Saisonnier)}{Canada, Norvège \& Suède}
+
+\medskip
+
+\cvsection{Bénévolat}
+
+\cvevent{Superviseur d'atelier}{De Sleutel}{Sep 2014 -- Mar 2015}{Anvers, Belgique}
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+\cvsection{Profil}
+
+\begin{itemize}
+\item Expérience avec des projets de petite et grande envergure
+\item Autonome sur des sujets techniques complexes
+\item À l'aise aussi bien en backend qu'en frontend
+\end{itemize}
+
+\cvsection{Points forts}
+
+\cvtag{résolution de problèmes}
+\cvtag{souci du détail}\\
+\smallskip
+\cvtag{esprit analytique}
+
+\cvsection{Technologies}
+
+\cvtag{python}
+\cvtag{javascript}
+\cvtag{odoo}\\
+\smallskip
+\cvtag{postgres}
+\cvtag{docker}
+\cvtag{git}
+
+\divider
+
+\cvtag{java}
+\cvtag{node.js}
+\cvtag{android}\\
+\smallskip
+\cvtag{sql}
+\cvtag{mongodb}
+\cvtag{rfid}
+
+\cvsection{Langues}
+
+\cvskill{Anglais}{5}
+\divider
+
+\cvskill{Français}{4}
+\divider
+
+\cvskill{Néerlandais}{5}
+\divider
+
+\cvskill{Allemand}{2}
+
+%% Yeah I didn't spend too much time making all the
+%% spacing consistent... sorry. Use \smallskip, \medskip,
+%% \bigskip, \vspace etc to make adjustments.
+\medskip
+
+\cvsection{À savoir}
+
+\cvachievement{\faHeartbeat}{Premiers secours \& RCP}{Formation \emph{Secourisme en milieu de travail} suivie en français}
+
+\divider
+
+\cvachievement{\faCertificate}{Instructeur d'escalade}{Cours de certification \emph{Initiator Rotsklimmen} organisé par \emph{Sport Vlaanderen}}
+
+\end{paracol}
+
+\end{document}
